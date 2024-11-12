@@ -1,0 +1,101 @@
+:root {
+  --bg-color: #131720;
+  --secondary-bg-color: #151f30;
+  --secondary-color: #2f80ed;
+  --dark-bg: #212529;
+}
+.desc-sec {
+  margin-top: 200px;
+  .title {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: "Rubik";
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 50px;
+  }
+}
+.step {
+  padding: 30px;
+  width: 25%;
+  background-color: var(--secondary-bg-color);
+  border-radius: 16px;
+  display: inline-block;
+  margin: 10px;
+  .title {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 20px;
+      color: white;
+      margin-left: 20px;
+    }
+    .step-number {
+      font-size: 24px;
+      color: var(--secondary-color);
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: rgba(47, 128, 237, 0.3);
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+  p {
+    margin-top: 20px;
+    line-height: 26px;
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 1440px) {
+  .step {
+    width: 31%;
+    box-sizing: border-box;
+    height: 230px;
+  }
+  .steps-cont {
+    display: flex;
+    align-items: center;
+
+    gap: 0px;
+  }
+}
+@media (max-width: 1300px) {
+  .step {
+    height: 250px;
+    .title {
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .step {
+    width: 31%;
+    height: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .steps-cont {
+    flex-wrap: wrap;
+  }
+  .step {
+    width: 100%;
+    height: auto;
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+}

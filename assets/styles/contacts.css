@@ -1,0 +1,142 @@
+:root {
+  --bg-color: #131720;
+  --secondary-bg-color: #151f30;
+  --secondary-color: #2f80ed;
+  --dark-bg: #212529;
+}
+.contacts-sec {
+  margin-top: 200px;
+  width: 100%;
+  .title {
+    font-size: 36px;
+    font-weight: 400;
+    font-family: "Rubik";
+  }
+  .content {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 110%;
+    align-items: center;
+    .info {
+      width: 27%;
+      margin-top: -170px;
+      .title {
+        font-size: 40px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.contact-form {
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid rgb(21, 31, 48);
+  width: 70%;
+  box-sizing: border-box;
+  border-radius: 16px;
+  .btn {
+    background-color: var(--secondary-color);
+    margin: 10px 0px 15px;
+    box-sizing: border-box;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-family: "Inter";
+    font-size: 14px;
+    font-weight: 500;
+    width: 200px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    &:hover {
+      color: var(--bg-color);
+      background-color: white;
+    }
+  }
+}
+.input {
+  box-sizing: border-box;
+  padding: 16px;
+  padding-inline: 24px;
+  font-size: 14px;
+  height: 44px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: var(--secondary-bg-color);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-family: "Rubik";
+  transition: 300ms all ease;
+  &::placeholder {
+    color: white;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: rgba(6, 104, 216, 0.79) 0px 0px 0px 3px;
+  }
+}
+#message {
+  height: 150px;
+}
+#email,
+#name {
+  width: 48%;
+
+  display: inline-block;
+}
+#name {
+  margin-right: 20px;
+}
+
+@media (max-width: 1330px) {
+  .content {
+    width: 80%;
+  }
+}
+@media (max-width: 1200px) {
+  #name,
+  #email {
+    width: 100%;
+  }
+  .contact-form {
+    width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  .contacts-sec {
+    margin-left: -20px;
+    .title {
+      margin-left: 50px;
+    }
+
+    .content {
+      flex-direction: column;
+      padding-inline: 50px;
+      width: 80%;
+      .info {
+        margin-top: 90px;
+        width: 100%;
+        .title {
+          margin-left: 0px;
+        }
+      }
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+}

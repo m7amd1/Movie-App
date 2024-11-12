@@ -1,0 +1,123 @@
+:root{
+    --bg-color:#131720;
+    --secondary-bg-color:#151f30;
+    --secondary-color:#2f80ed;
+}
+.cards-cont{
+    width: 100%;
+    display: flex;
+    gap:15px; 
+    flex-wrap: wrap;
+    margin-block: 60px;
+    row-gap: 30px;
+}
+.card-title{
+    transition: 300ms;
+    font-size: 1rem; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 100%;
+}
+.card{
+    position: relative;
+    width:180px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: 300ms;
+    overflow: hidden;
+}
+.card-cont{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75%;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+.card-img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+    scale: 120%;
+    border-radius: 20px;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 300ms;
+    overflow: hidden;
+
+}
+.card-info{
+    position: relative;
+    margin-top: 230px;
+}
+
+.card .hidden-info{
+    width: 100%;
+    transition: 300ms;
+    
+}
+.card .black-glass{
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    height: 75%;
+    width: 100%;
+    transition: 300ms;
+    
+}
+.card:hover{
+    cursor: pointer;
+  .card-title{
+    color: var(--secondary-color);
+    
+  }
+  .hidden-info{
+    opacity: 1; 
+  visibility: visible; 
+  }
+  .black-glass{
+    
+    background: rgba(24, 24, 24, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    
+  }
+  .card-img{
+    scale:140%;
+  }
+  .play-icon{
+    opacity: 1; 
+    visibility: visible; 
+  }
+}
+.play-icon{
+    position: absolute;
+    z-index: 10;
+    top:40%;
+    left: 35%;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 300ms ease, visibility 300ms ease;
+    
+}
+
+.saved{
+  fill: yellow;
+}

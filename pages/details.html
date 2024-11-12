@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+    <link rel="stylesheet" href="../assets/styles/footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <link rel="stylesheet" href="../assets/styles/details.css" />
+    <link rel="stylesheet" href="../assets/styles/header.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+      <div class="navbar">
+        
+          <h2 class="title">Movie <span>Hunt</span></h2>
+        
+        <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./favorites.html" class="nav-link">Favorites</a></li>
+          <li class="nav-item"><a href="./contacts.html" class="nav-link">Contacts</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+        </ul>
+        <div class="search-bar">
+          <input
+            type="text"
+            class="search"
+            id="search"
+            placeholder="I'm looking for..."
+          />
+          <button class="search-btn">
+            <svg
+              width="22px"
+              height="22px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M14.9536 14.9458L21 21M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                  stroke="#2f80ed"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div class="sign-in">
+          <button class="drawer-btn" id="drawer-btn"><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+          <div><a href="./signIn.html" class="nav-link">Sign in</a></div>
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M7 7.13193V6.61204C7 4.46614 7 3.3932 7.6896 2.79511C8.37919 2.19703 9.44136 2.34877 11.5657 2.65224L15.8485 3.26408C18.3047 3.61495 19.5327 3.79039 20.2664 4.63628C21 5.48217 21 6.72271 21 9.20377V14.7962C21 17.2773 21 18.5178 20.2664 19.3637C19.5327 20.2096 18.3047 20.385 15.8485 20.7359L11.5657 21.3478C9.44136 21.6512 8.37919 21.803 7.6896 21.2049C7 20.6068 7 19.5339 7 17.388V17.066"
+                stroke="#ffffff"
+                stroke-width="2"
+              ></path>
+              <path
+                class="sign-in-logo"
+                d="M16 12L16.7809 11.3753L17.2806 12L16.7809 12.6247L16 12ZM4 13C3.44771 13 3 12.5523 3 12C3 11.4477 3.44771 11 4 11V13ZM12.7809 6.3753L16.7809 11.3753L15.2191 12.6247L11.2191 7.6247L12.7809 6.3753ZM16.7809 12.6247L12.7809 17.6247L11.2191 16.3753L15.2191 11.3753L16.7809 12.6247ZM16 13H4V11H16V13Z"
+                fill="#ffffff"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <div id="drawer" class="drawer">
+      <button class="close" id="close">
+        <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" 
+        xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier"> 
+          <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275
+           3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 
+           12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 
+           20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 
+           20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#ffffff"></path> </g></svg>
+  
+      </button>
+      <div class="search-bar">
+        <input type="text" class="search" id="search1" placeholder="I'm looking for..." />
+        
+      </div>
+      <ul class="nav-list">
+          <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./favorites.html" class="nav-link">Favorites</a></li>
+          <li class="nav-item"><a href="./contact.html" class="nav-link">Contacts</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+      </ul>
+    </div>
+    <!-- Navbar -->
+
+    <section class="hero" id="hero">
+      <div class="bg">
+        <div class="container">
+          <div class="description">
+            <div class="play">
+              <i class="fa-regular fa-circle-play"></i>
+              <span>Trailer</span>
+            </div>
+            <h1 id="title">The Fast and the Furious</h1>
+            <ul id="info">
+              <li><i class="fa-regular fa-star"></i>9.7</li>
+              <span>• </span>
+              <li>Action</li>
+              <span>• </span>
+              <li>2021</li>
+              <span>• </span>
+              <li>1 h 42 min</li>
+              <span>• </span>
+              <li>16+</li>
+            </ul>
+            <p id="overview">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-player">
+      <div class="container">
+        <video
+          width="1000px"
+          controls
+          loop
+          poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+          data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
+          src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+        ></video>
+        <div class="video-actions">
+          <div class="sources">
+            <i class="fa-solid fa-download"></i>
+            <span>Download:</span>
+            <a href="#">
+              <span style="border: 0">480p</span>
+            </a>
+            <a href="#">
+              <span>720p</span>
+            </a>
+            <a href="#">
+              <span>1080p</span>
+            </a>
+            <a href="#">
+              <span>4k</span>
+            </a>
+          </div>
+          <div class="addFavorites">
+            <a href="#" id="fav-btn">
+              <i class="fa-regular fa-bookmark"></i>
+              <span>Add to favorites</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallerySection">
+      <div class="container">
+        <div class="heading">
+          <i class="fa-solid fa-film"></i>
+          <h3>1st season</h3>
+        </div>
+        <i class="fa-solid fa-arrow-left arrow" id="left-arrow"></i>
+        <div class="gallery-wrapper">
+          <div class="gallery">
+            <div class="card">
+              <div class="img">
+                <div class="btnPlay">
+                  <i class="fa-regular fa-circle-play"></i>
+                  <span>56:36</span>
+                </div>
+                <img src="./img/1.jpg" draggable="false" alt="series one" />
+              </div>
+              <h3>1st series</h3>
+            </div>
+            <div class="card">
+              <div class="img">
+                <div class="btnPlay">
+                  <i class="fa-regular fa-circle-play"></i>
+                  <span>58:41</span>
+                </div>
+                <img src="./img/2.jpg" draggable="false" alt="series two" />
+              </div>
+              <h3>2nd series</h3>
+            </div>
+            <div class="card">
+              <div class="img">
+                <div class="btnPlay">
+                  <i class="fa-regular fa-circle-play"></i>
+                  <span>57:19</span>
+                </div>
+                <img src="./img/3.jpg" draggable="false" alt="series three" />
+              </div>
+              <h3>3rd series</h3>
+            </div>
+            <div class="card">
+              <div class="img">
+                <div class="btnPlay">
+                  <i class="fa-regular fa-circle-play"></i>
+                  <span>54:57</span>
+                </div>
+                <img src="./img/4.jpg" draggable="false" alt="series four" />
+              </div>
+              <h3>4th series</h3>
+            </div>
+            <div class="card">
+              <div class="img">
+                <div class="btnPlay">
+                  <i class="fa-regular fa-circle-play"></i>
+                  <span>53:52</span>
+                </div>
+                <img src="./img/5.jpg" draggable="false" alt="series five" />
+              </div>
+              <h3>5th series</h3>
+            </div>
+            <div class="card">
+              <div class="img">
+                <div class="btnPlay">
+                  <i class="fa-regular fa-circle-play"></i>
+                  <span>59:37</span>
+                </div>
+                <img src="./img/6.jpg" draggable="false" alt="series six" />
+              </div>
+              <h3>6th series</h3>
+            </div>
+          </div>
+        </div>
+        <i class="fa-solid fa-arrow-right arrow" id="right-arrow"></i>
+      </div>
+    </section>
+
+    <section class="genres">
+      <div class="container">
+        <h4>Genres</h4>
+        <div class="movie-type">
+          <a href="#">
+            <span>action</span>
+          </a>
+          <a href="#">
+            <span>thriller</span>
+          </a>
+          <a href="#">
+            <span>crime</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="shareSic">
+      <div class="container">
+        <h4>share</h4>
+        <div class="share">
+          <a href="#">
+            <span>
+              <i class="fa-brands fa-facebook"></i>
+              share</span
+            >
+          </a>
+          <a href="#">
+            <span>
+              <i class="fa-brands fa-twitter"></i>
+              tweet</span
+            >
+          </a>
+          <a href="#">
+            <span>
+              <i class="fa-solid fa-share"></i>
+              share</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="commentSection">
+      <div class="container">
+        <div class="row">
+          <div class="comment">
+            <div class="heading">
+              <h2>comments</h2>
+            </div>
+            <div class="qoutes">
+              <div class="qoute">
+                <div class="name">
+                  <img src="./img/avatar.svg" draggable="false" alt="person" />
+                  <div>
+                    <h4>Brian Cranston</h4>
+                    <span>30.08.2021, 17:53</span>
+                  </div>
+                </div>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable. If you are going to use a passage of
+                  Lorem Ipsum, you need to be sure there isn't anything
+                  embarrassing hidden in the middle of text.
+                </p>
+                <div class="qouteActions">
+                  <div class="qouteRate">
+                    <div class="btn">
+                      <i class="fa-regular fa-square-plus"></i> 12
+                    </div>
+                    <div class="btn">
+                      7 <i class="fa-regular fa-square-minus"></i>
+                    </div>
+                  </div>
+                  <div class="qouteBtn">
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-reply"></i> <span>reply</span>
+                      </a>
+                    </div>
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-retweet"></i> <span>qoute</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="qoute w-90">
+                <div class="name">
+                  <img src="./img/avatar.svg" draggable="false" alt="person" />
+                  <div>
+                    <h4>Jesse Plemons</h4>
+                    <span>24.08.2021, 16:41 </span>
+                  </div>
+                </div>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book.
+                </p>
+                <div class="qouteActions">
+                  <div class="qouteRate">
+                    <div class="btn">
+                      <i class="fa-regular fa-square-plus"></i> 10
+                    </div>
+                    <div class="btn">
+                      0 <i class="fa-regular fa-square-minus"></i>
+                    </div>
+                  </div>
+                  <div class="qouteBtn">
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-reply"></i> <span>reply</span>
+                      </a>
+                    </div>
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-retweet"></i> <span>qoute</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="qoute w-90">
+                <div class="name">
+                  <img src="./img/avatar.svg" draggable="false" alt="person" />
+                  <div>
+                    <h4>Matt Jones</h4>
+                    <span>11.08.2021, 11:11 </span>
+                  </div>
+                </div>
+                <p class="marked">
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+                <p>
+                  It has survived not only five centuries, but also the leap
+                  into electronic typesetting, remaining essentially unchanged.
+                  It was popularised in the 1960s with the release of Letraset
+                  sheets containing Lorem Ipsum passages, and more recently with
+                  desktop publishing software like Aldus PageMaker including
+                  versions of Lorem Ipsum.
+                </p>
+                <div class="qouteActions">
+                  <div class="qouteRate">
+                    <div class="btn">
+                      <i class="fa-regular fa-square-plus"></i> 9
+                    </div>
+                    <div class="btn">
+                      2 <i class="fa-regular fa-square-minus"></i>
+                    </div>
+                  </div>
+                  <div class="qouteBtn">
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-reply"></i> <span>reply</span>
+                      </a>
+                    </div>
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-retweet"></i> <span>qoute</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="qoute">
+                <div class="name">
+                  <img src="./img/avatar.svg" draggable="false" alt="person" />
+                  <div>
+                    <h4>Tess Harper</h4>
+                    <span>07.08.2021, 14:33 </span>
+                  </div>
+                </div>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable. If you are going to use a passage of
+                  Lorem Ipsum, you need to be sure there isn't anything
+                  embarrassing hidden in the middle of text.
+                </p>
+                <div class="qouteActions">
+                  <div class="qouteRate">
+                    <div class="btn">
+                      <i class="fa-regular fa-square-plus"></i> 7
+                    </div>
+                    <div class="btn">
+                      4 <i class="fa-regular fa-square-minus"></i>
+                    </div>
+                  </div>
+                  <div class="qouteBtn">
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-reply"></i> <span>reply</span>
+                      </a>
+                    </div>
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-retweet"></i> <span>qoute</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="qoute">
+                <div class="name">
+                  <img src="./img/avatar.svg" draggable="false" alt="person" />
+                  <div>
+                    <h4>Jonathan Banks</h4>
+                    <span>02.08.2021, 15:24 </span>
+                  </div>
+                </div>
+                <p>
+                  Many desktop publishing packages and web page editors now use
+                  Lorem Ipsum as their default model text, and a search for
+                  'lorem ipsum' will uncover many web sites still in their
+                  infancy. Various versions have evolved over the years,
+                  sometimes by accident, sometimes on purpose (injected humour
+                  and the like).
+                </p>
+                <div class="qouteActions">
+                  <div class="qouteRate">
+                    <div class="btn">
+                      <i class="fa-regular fa-square-plus"></i> 2
+                    </div>
+                    <div class="btn">
+                      17 <i class="fa-regular fa-square-minus"></i>
+                    </div>
+                  </div>
+                  <div class="qouteBtn">
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-reply"></i> <span>reply</span>
+                      </a>
+                    </div>
+                    <div class="btn">
+                      <a href="#">
+                        <i class="fa-solid fa-retweet"></i> <span>qoute</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog">
+                <div class="catalog-wrapper">
+                  <span>5 from 16 </span>
+                  <div class="catalog-paginators">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="comments-from">
+                <form action="">
+                  <textarea
+                    name="comment"
+                    placeholder="Add Comment"
+                    id=""
+                  ></textarea>
+                </form>
+                <button type="submit">SEND</button>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar">
+            <div class="subscribe">
+              <i class="fa-solid fa-envelope-circle-check"></i>
+              <h2>Notifications</h2>
+              <p>Subscribe to notifications about new episodes</p>
+              <form action="">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </form>
+              <button type="submit">SEND</button>
+            </div>
+            <h3>New items</h3>
+            <div class="row">
+              <div class="card">
+                <div class="img">
+                  <div class="card-list">
+                    <div class="card-add"><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="card-rating">
+                      <i class="fa-regular fa-star"></i>
+                      <span>8.3</span>
+                    </div>
+                  </div>
+                  <img src="./img/1.png" draggable="false" alt="" />
+                </div>
+                <h3>The Good Lord Bird</h3>
+                <span>Free</span>
+                <span>action</span>
+                <span>2019</span>
+              </div>
+              <div class="card">
+                <div class="img">
+                  <div class="card-list">
+                    <div class="card-add"><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="card-rating">
+                      <i class="fa-regular fa-star"></i>
+                      <span>8.1</span>
+                    </div>
+                  </div>
+                  <img src="./img/2.png" draggable="false" alt="" />
+                </div>
+                <h3>The Dictator</h3>
+                <span>Free</span>
+                <span>comedy</span>
+                <span>2012</span>
+              </div>
+              <div class="card">
+                <div class="img">
+                  <div class="card-list">
+                    <div class="card-add" id="cardAdd"><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="card-rating">
+                      <i class="fa-regular fa-star"></i>
+                      <span>7.9</span>
+                    </div>
+                  </div>
+                  <img src="./img/3.png" draggable="false" alt="" />
+                </div>
+                <h3>12 Years a Slave</h3>
+                <span>Free</span>
+                <span>history</span>
+                <span>2013</span>
+              </div>
+              <div class="card">
+                <div class="img">
+                  <div class="card-list">
+                    <div class="card-add"><i class="fa-regular fa-bookmark"></i></div>
+                    <div class="card-rating">
+                      <i class="fa-regular fa-star"></i>
+                      <span>8.8</span>
+                    </div>
+                  </div>
+                  <img src="./img/4.png" draggable="false" alt="" />
+                </div>
+                <h3>Get On Up</h3>
+                <span>Free</span>
+                <span>Biography</span>
+                <span>2014</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="footer-content">
+  
+        <div class="social-col">
+          <h2 class="social-icon">Movie <span>Hunt</span></h2>
+          <p>Movies & TV Shows, Online cinema,
+            <br>
+            Movie database HTML Template.
+          </p>
+          <ul class="social-list">
+            <li class="social-item">
+              <svg width="40px" height="40px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <circle cx="24" cy="24" r="20" fill="#3B5998"></circle>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M29.315 16.9578C28.6917 16.8331 27.8498 16.74 27.3204 16.74C25.8867 16.74 25.7936 17.3633 25.7936 18.3607V20.1361H29.3774L29.065 23.8137H25.7936V35H21.3063V23.8137H19V20.1361H21.3063V17.8613C21.3063 14.7453 22.7708 13 26.4477 13C27.7252 13 28.6602 13.187 29.8753 13.4363L29.315 16.9578Z"
+                    fill="white"></path>
+                </g>
+              </svg>
+            </li>
+            <li class="social-item">
+              <svg width="40px" height="40px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <circle cx="24" cy="24" r="20" fill="#1DA1F2"></circle>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M36 16.3086C35.1177 16.7006 34.1681 16.9646 33.1722 17.0838C34.1889 16.4742 34.9697 15.5095 35.3368 14.36C34.3865 14.9247 33.3314 15.3335 32.2107 15.5551C31.3123 14.5984 30.0316 14 28.6165 14C25.8975 14 23.6928 16.2047 23.6928 18.9237C23.6928 19.3092 23.7368 19.6852 23.8208 20.046C19.7283 19.8412 16.1005 17.8805 13.6719 14.9015C13.2479 15.6287 13.0055 16.4742 13.0055 17.3766C13.0055 19.0845 13.8735 20.5916 15.1958 21.4747C14.3878 21.4491 13.6295 21.2275 12.9647 20.8587V20.9203C12.9647 23.3066 14.663 25.296 16.9141 25.7496C16.5013 25.8616 16.0661 25.9224 15.6174 25.9224C15.2998 25.9224 14.991 25.8912 14.6902 25.8336C15.3166 27.7895 17.1357 29.2134 19.2899 29.2534C17.6052 30.5733 15.4822 31.3612 13.1751 31.3612C12.7767 31.3612 12.3848 31.338 12 31.2916C14.1791 32.6884 16.7669 33.5043 19.5475 33.5043C28.6037 33.5043 33.5562 26.0016 33.5562 19.4956C33.5562 19.282 33.5522 19.0693 33.5418 18.8589C34.5049 18.1629 35.34 17.2958 36 16.3086Z"
+                    fill="white"></path>
+                </g>
+              </svg>
+            </li>
+            <li class="social-item">
+              <svg width="40px" height="40px" viewBox="0 0 512 512" data-name="Слой 1" id="Слой_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #cdccd2;
+                      }
+  
+                      .cls-2 {
+                        fill: #ffffff;
+                      }
+  
+                      .cls-3 {
+                        opacity: 0.79;
+                      }
+  
+                      .cls-4 {
+                        fill: url(#linear-gradient);
+                      }
+  
+                      .cls-5 {
+                        fill: url(#linear-gradient-2);
+                      }
+  
+                      .cls-6 {
+                        fill: url(#linear-gradient-3);
+                      }
+                    </style>
+                    <linearGradient gradientUnits="userSpaceOnUse" id="linear-gradient" x1="305.31" x2="318.59"
+                      y1="210.09" y2="196.81">
+                      <stop offset="0" stop-color="#fbb03b"></stop>
+                      <stop offset="0.19" stop-color="#ea6d48"></stop>
+                      <stop offset="0.44" stop-color="#d4145a"></stop>
+                      <stop offset="0.64" stop-color="#bb0b5b"></stop>
+                      <stop offset="0.86" stop-color="#a6035d"></stop>
+                      <stop offset="1" stop-color="#9e005d"></stop>
+                    </linearGradient>
+                    <linearGradient id="linear-gradient-2" x1="172.97" x2="340.88" xlink:href="#linear-gradient"
+                      y1="337.59" y2="169.68"></linearGradient>
+                    <linearGradient id="linear-gradient-3" x1="217.29" x2="295.71" xlink:href="#linear-gradient"
+                      y1="293.12" y2="214.7"></linearGradient>
+                  </defs>
+                  <title></title>
+                  <circle class="cls-1" cx="255" cy="256" r="207.77"></circle>
+                  <circle class="cls-2" cx="254.68" cy="256.04" r="194.41"></circle>
+                  <g class="cls-3">
+                    <circle class="cls-4" cx="311.95" cy="203.45" r="9.39"></circle>
+                    <path class="cls-5"
+                      d="M313.44,158H201.24C179.51,158,161,175.94,161,197.68v112.2c0,21.73,18.51,39.13,40.24,39.13h112.2c21.74,0,38.56-17.39,38.56-39.13V197.68C352,175.94,335.18,158,313.44,158ZM334,304.42A27.2,27.2,0,0,1,306.43,332H208.26C192.73,332,180,319.94,180,304.42V206.24A28.35,28.35,0,0,1,208.26,178h98.16C322,178,334,190.72,334,206.24v98.17Z">
+                    </path>
+                    <path class="cls-6"
+                      d="M256.5,198.46a55.45,55.45,0,1,0,55.45,55.45A55.45,55.45,0,0,0,256.5,198.46Zm0,91.54a36.09,36.09,0,1,1,36.09-36.09A36.1,36.1,0,0,1,256.5,290Z">
+                    </path>
+                  </g>
+                </g>
+              </svg>
+            </li>
+            <li class="social-item">
+              <svg width="40px" height="40px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <circle cx="512" cy="512" r="512" style="fill:#2787f5"></circle>
+                  <path
+                    d="M585.83 271.5H438.17c-134.76 0-166.67 31.91-166.67 166.67v147.66c0 134.76 31.91 166.67 166.67 166.67h147.66c134.76 0 166.67-31.91 166.67-166.67V438.17c0-134.76-32.25-166.67-166.67-166.67zm74 343.18h-35c-13.24 0-17.31-10.52-41.07-34.62-20.71-20-29.87-22.74-35-22.74-7.13 0-9.17 2-9.17 11.88v31.57c0 8.49-2.72 13.58-25.12 13.58-37 0-78.07-22.4-106.93-64.16-43.45-61.1-55.33-106.93-55.33-116.43 0-5.09 2-9.84 11.88-9.84h35c8.83 0 12.22 4.07 15.61 13.58 17.31 49.9 46.17 93.69 58 93.69 4.41 0 6.45-2 6.45-13.24v-51.6c-1.36-23.76-13.92-25.8-13.92-34.28 0-4.07 3.39-8.15 8.83-8.15h55c7.47 0 10.18 4.07 10.18 12.9v69.58c0 7.47 3.39 10.18 5.43 10.18 4.41 0 8.15-2.72 16.29-10.86 25.12-28.17 43.11-71.62 43.11-71.62 2.38-5.09 6.45-9.84 15.28-9.84h35c10.52 0 12.9 5.43 10.52 12.9-4.41 20.37-47.18 80.79-47.18 80.79-3.73 6.11-5.09 8.83 0 15.61 3.73 5.09 16 15.61 24.1 25.12 14.94 17 26.48 31.23 29.53 41.07 3.45 9.84-1.65 14.93-11.49 14.93z"
+                    style="fill:#fff"></path>
+                </g>
+              </svg>
+            </li>
+  
+          </ul>
+        </div>
+        <ul class="nav-col">
+          <li class="nav-title">Movie Hunt</li>
+          <li class="nav-link">About us</li>
+          <li class="nav-link">My profile</li>
+          <li class="nav-link">Pricing Plans</li>
+          <li class="nav-link">Contacts</li>
+        </ul>
+        <ul class="nav-col">
+          <li class="nav-title">Browse</li>
+          <li class="nav-link">Live TV</li>
+          <li class="nav-link">Live News</li>
+          <li class="nav-link">Live Sports</li>
+          <li class="nav-link">Streaming Library</li>
+        </ul>
+        <ul class="nav-col">
+          <li class="nav-title"><br></li>
+          <li class="nav-link">TV Shows</li>
+          <li class="nav-link">Movies</li>
+          <li class="nav-link"> Kids</li>
+          <li class="nav-link">Collections</li>
+        </ul>
+        <ul class="nav-col">
+          <li class="nav-title">Help</li>
+          <li class="nav-link">Account & Billing</li>
+          <li class="nav-link">Plans & Pricing</li>
+          <li class="nav-link">Supported devices</li>
+          <li class="nav-link">Accessibility</li>
+        </ul>
+      </div>
+     
+    </footer>
+   
+
+    <!-- Footer -->
+
+    <i class="fa-solid fa-arrow-up" id="backToTop"></i>
+
+    <script src="../assets/js/slider.js"></script>
+    <script src="../assets/js/details.js"></script>
+    <script src="../assets/js/drawer.js"></script>
+  </body>
+</html>
